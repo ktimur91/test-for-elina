@@ -10,7 +10,7 @@ import isGuest from '@/middleware/isGuest'
 
 // Local: Routes
 import auth from './modules/auth'
-import base from './modules/base'
+import orders from './modules/orders'
 
 // Create router
 const router = createRouter({
@@ -21,12 +21,12 @@ const router = createRouter({
       component: () => import('@/views/redirect-view.vue')
     },
     {
-      path: '/main',
+      path: '/orders',
       meta: {
         middleware: [isAuth]
       },
       component: () => import('@/layouts/default-layout.vue'),
-      children: [...base]
+      children: [...orders]
     },
     {
       path: '/auth',

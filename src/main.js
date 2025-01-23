@@ -1,4 +1,5 @@
-// import './assets/main.css'
+import 'ant-design-vue/dist/reset.css'
+import './assets/main.css'
 
 // NPM
 import { createApp } from 'vue'
